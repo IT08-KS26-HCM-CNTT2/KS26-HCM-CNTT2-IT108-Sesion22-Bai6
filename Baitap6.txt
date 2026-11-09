@@ -1,0 +1,43 @@
+1. MỤC TIÊU:
+- Sử dụng Prompt AI (Công thức 3 thành phần) để giải thích lỗi.
+- Hướng dẫn thực hiện chạy dưới quyền Administrator và các mẹo chụp ảnh màn hình.
+- Soạn thảo báo cáo lỗi (Bug Report) gửi Giảng viên theo chuẩn mực.
+YÊU CẦU 1: PROMPT AI (CÔNG THỨC 3 THÀNH PHẦN)
+[Bối cảnh - Context]: 
+Tôi đang làm bài tập cần đẩy code lên GitHub cho kịp deadline, nhưng khi mở Terminal (Git Bash) và chạy lệnh thì bị báo lỗi: "error: open(".git/FETCH_HEAD"): Permission denied". Tôi đã thử chạy lại lệnh vài lần nhưng không được.
+[Nhiệm vụ - Task]: 
+Hãy giải thích cho tôi nguyên nhân cốt lõi gây ra lỗi này là gì bằng ngôn ngữ bình dân, dễ hiểu nhất cho người mới bắt đầu học lập trình (tránh dùng các thuật ngữ chuyên ngành phức tạp).
+[Định dạng đầu ra - Output Format]: 
+Trình bày ngắn gọn trong 3-4 câu, tập trung vào hai ý: 
+1. Bản chất lỗi "Permission denied" trên file .git/FETCH_HEAD là gì?
+2. Tại sao việc chỉ bấm chạy lại lệnh đơn thuần sẽ không giải quyết được vấn đề?
+YÊU CẦU 2: HƯỚNG DẪN THỰC HIỆN "RUN AS ADMINISTRATOR" & MẸO CHỤP ẢNH
+A. Các bước thực hiện:
+1. Tắt hoàn toàn cửa sổ Terminal / Git Bash hiện tại.
+2. Tìm ứng dụng Git Bash (hoặc Command Prompt / PowerShell) trong Start Menu.
+3. Nhấp chuột phải vào ứng dụng và chọn "Run as administrator" (Chạy dưới quyền Quản trị viên).
+4. Dùng lệnh `cd` để truy cập lại thư mục dự án và thực hiện lại thao tác Git.
+B. Quy tắc chụp ảnh màn hình minh họa chuyên nghiệp:
+- Khoanh vùng lỗi: Dùng công cụ chụp ảnh (Snipping Tool, Lightshot...) vẽ khung đỏ hoặc mũi tên chỉ trực tiếp vào dòng chữ "error: open(".git/FETCH_HEAD"): Permission denied".
+- Bảo mật thông tin: Dùng công cụ Blur (làm mờ) hoặc vẽ ô đen che các thông tin cá nhân như:
+  + Tên User hệ thống trên đường dẫn (ví dụ: C:\Users\Ten_Cua_Ban\...).
+  + IP, Token, Key cá nhân (nếu có hiển thị trên Terminal).
+YÊU CẦU 3: TIN NHẮN BÁO LỖI GỬI GIẢNG VIÊN (BUG REPORTING FRAMEWORK)
+[Tiêu đề/Mở đầu]:
+Em chào Thầy/Cô ạ, em đang làm bài tập đẩy code lên GitHub thì gặp lỗi phân quyền hệ thống. Em đã thử các hướng xử lý cơ bản và chạy quyền Administrator nhưng vẫn chưa sửa được, em xin gửi thông tin chi tiết nhờ Thầy/Cô hỗ trợ giúp em với ạ:
+1. Mô tả tóm tắt (Summary): 
+Lỗi từ chối quyền truy cập `Permission denied` khi Git thao tác trên file `.git/FETCH_HEAD`.
+2. Các bước tái hiện lỗi (Steps to Reproduce):
+- Bước 1: Mở Git Bash tại thư mục dự án.
+- Bước 2: Chạy lệnh `git pull` (hoặc `git fetch`).
+- Bước 3: Terminal trả về lỗi: `error: open(".git/FETCH_HEAD"): Permission denied`.
+- Bước 4: Đã đóng Terminal, mở lại bằng quyền "Run as Administrator" và chạy lại lệnh trên nhưng vẫn gặp lỗi tương tự.
+3. Kết quả mong đợi (Expected Result):
+Lệnh Git chạy thành công, cập nhật/đồng bộ code với GitHub bình thường.
+4. Kết quả thực tế (Actual Result):
+Hệ thống báo lỗi phân quyền `Permission denied` và chặn thao tác ghi dữ liệu vào file `.git/FETCH_HEAD`.
+5. Môi trường & Đính kèm (Environment & Attachments):
+- Hệ điều hành: Windows 11 (phiên bản 64-bit).
+- Công cụ: Git Bash.
+- Đính kèm: [File ảnh chụp màn hình terminal đã khoanh vùng lỗi và che thông tin cá nhân].
+
